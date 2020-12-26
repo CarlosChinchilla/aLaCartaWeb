@@ -1,0 +1,824 @@
+@charset "utf-8";
+
+@media only screen and (min-width: 650px) {
+
+	#movMenu{
+		display:none;
+	}
+	
+	.logo{
+    	margin-left: 2%;
+	}
+	
+	.superior{
+		display: block !important;
+	}
+	
+}
+
+@media only screen and (max-width: 650px) {
+
+    .footerbot p{
+    	display:none;
+	}
+	
+	.buscador{
+		width: 100% !important; 
+		min-width: 0 !important;
+		margin: -150px auto 20px auto !important;
+	}
+	
+	.loginVent{
+		width: 100% !important; 
+		min-width: 0 !important;
+	}
+	
+	.botonAdmin{
+		width: 100% !important; 
+		min-width: 0 !important;
+	}
+	
+	.menuAdmin{
+		width: 100% !important; 
+	}
+	
+	#formRest, #formRestEd{
+		width: 100% !important; 
+		min-width: 0 !important;
+	}
+	
+	.imgRest{
+		display:none;
+	}
+	
+	.containerData{
+		width: 100% !important;
+	}
+	
+	.restaurantePack{
+		height: 100% !important;
+		min-width: 0 !important;
+	}
+	
+	.usuariosPack{
+		width: 100% !important;
+		min-width: 0 !important;
+	}
+	
+	.logoLetter, .logo{
+		float:right !important;
+	}
+	
+	#secondcontainer{
+		padding: 0 0 100px 0 !important;
+	}
+	
+	.navegadorAdmin label{
+	    display:none !important;
+	}
+	
+	.botonAdminList>img{
+		display: block !important;
+	}
+	
+	.botonAdminList>label{
+		display: none !important;
+	}
+	
+	.botonAdminList{
+		width: auto !important;
+	}
+	
+	.datosUser img{
+    	margin: 0 5px 0 10px !important;
+	}
+	
+	/*-----------MENU DESPLEGABLE-----*/
+	.superior{
+		display: none;
+		left: 0;
+		position: absolute;
+		top: 0;
+    	transition: all ease 0.3s;
+	}
+	
+	.superior ul{
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+		background-color: #007d00;
+		padding: 0px 0px 0px 0px;
+    	margin: 60px 0px 0px 0px;
+    	float: left;
+	}
+	
+	.superior ul li{
+		width: 100%;
+		display: flex;
+    	flex-direction: row-reverse;
+    	justify-content: flex-end;
+    	padding: 15px 30px;
+    	cursor: pointer;
+    	border-bottom: 1px solid #ffffff;
+	}
+	.superior ul li:hover{
+		background-color: #00c600;
+	}
+	
+	.superior ul li a{
+		font-size: 20px;
+		padding: 0;
+		margin: 5px 0px 0px 0px;
+		color: #ffffff;
+	}
+	
+	.superior ul li a:hover{
+		color: #ffffff;
+	}
+	
+	.superior ul li img{
+		height: 20px;
+		padding: 0px 10px 0px 0px;
+	}
+	
+	
+	/*------------*/
+	
+	#movMenu{
+		display:block;
+	}
+	
+	.superior2{
+		background-color: #007d0050;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+*{
+    font-family: Arial;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+	height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#maincontainer{
+	height: 100%;
+	width: 100%;
+}
+
+.secondCont{
+	height: 10px;
+}
+
+#secondcontainer{
+	padding: 20px 0 400px 0;
+}
+
+#secondcontainerLog, #secondcontainerReg{
+	height: 100px;
+}
+
+#secondContainerAdmin, #secondContainerUser, #secondContainerRest{
+	height: 500px;
+}
+
+/*-------------------HEADER-------------------------*/
+
+header{
+    margin: 0;
+    padding: 0;
+    padding: 1%;
+    width: 100%;
+    height: 200px;
+    background-image: url("../img/back.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+#movMenu{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 60px;
+	width: 60px;
+	float: right;
+	background-color: #007d00;
+	cursor: pointer;
+}
+
+#headerMain{
+    height: 400px;
+}
+
+.superior{
+    width: 100%;
+    height: 25px;
+}
+
+.superior a{
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    color: #00A600;
+    margin: 5px 5px 0px 0px;
+    padding: 0px 15px 0px 0px;
+}
+
+.superior img{
+    margin: 5px 5px 0px 0px;
+    padding: 0px 0px 0px 15px;
+    float: right;
+    height: 15px;
+}
+
+.supBot:hover{
+    cursor: pointer;
+    color: #00c600;
+}
+
+.superior2{
+    width: 100%;
+    height: 60px;
+}
+
+.logo{
+    padding: 0px 0px 0px 0px;
+    height: 100%;
+    float: left;
+}
+
+.logoLetter{
+    padding: 0px 0px 0px 0px;
+    height: 100%;
+    float: left;
+}
+
+/*------------------LOGIN----------------------------*/
+
+#maincontainerLogin{
+	text-align: center;
+}
+
+.loginVent{
+	width:400px;
+    margin: -100px auto 50px auto;
+    padding: 10px 0px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 2px 3px 12px -2px rgba(0,0,0,0.51);
+    z-index: 5;
+}
+
+.ventReg{
+    margin: -150px auto 30px auto;
+}
+
+.loginVent>h2{
+	color: #006700;
+	margin-bottom: 30px;
+}
+
+#formLogin{
+	text-align: center;
+}
+
+.loginInput, .loginInputPass{
+    outline: none;
+    width: 70%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #ffffff;
+    background-image: url('../img/usermini.png');
+    background-position: 12px 10px;
+    background-repeat: no-repeat;
+    padding: 0px 0px 0px 45px;
+    border: 1px solid #00A600;
+    margin: 0px 0px 20px 0px;
+}
+
+
+
+.loginInputPass{
+    background-image: url('../img/passmini.png');
+}
+
+
+
+.botLogin{
+    background-color: #00A600;
+    font-size: 15px;
+    color: #ffffff;
+    height: 40px;
+    width: 60%;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    border: 1px solid #00A600;
+    border-left: none;
+    margin: 10px 0px 0px 0px;
+}
+
+
+.botLogin:hover{
+    background-color: #007d00;
+}
+
+.botLogin:active{
+    background-color: #3a993a;
+}
+
+.textLog{
+	margin: 20px 0px 3px 0px;
+	font-size: 12px;
+	color: #737373;
+	
+}
+
+.textReg{
+	color: #00A600;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.textReg:hover{
+    color: #007d00;
+}
+
+.textReg:active{
+    color: #3a993a;
+}
+
+/*------------------BUSCAR----------------------------*/
+
+.buscador{
+	width: 50%;
+	min-width:500px;
+    margin: -50px auto 30px auto;
+    padding: 10px 0px 40px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: 2px 3px 12px -2px rgba(0,0,0,0.51);
+    z-index: 5;
+}
+
+.buscador>h1{
+	color: #006700;
+}
+
+.textBusc{
+	color: #737373;
+	margin-bottom: 20px;
+}
+
+#formBuscar{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+ }
+
+.buscar{
+    outline: none;
+    width: 60%;
+    height: 40px;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 15px;
+    background-color: #ffffff;
+    background-image: url('../img/lupamini.png');
+    background-position: 12px 10px;
+    background-repeat: no-repeat;
+    padding: 0px 0px 0px 45px;
+    border: 1px solid #00A600;
+}
+.botBusqueda{
+    background-color: #00A600;
+    font-size: 15px;
+    color: #ffffff;
+    height: 40px;
+    width: 25%;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    font-weight: bolder;
+    cursor: pointer;
+    border: 1px solid #00A600;
+    border-left: none;
+}
+
+
+.botBusqueda:hover{
+    background-color: #007d00;
+}
+
+.botBusqueda:active{
+    background-color: #00c600;
+}
+
+/*-------------------MENU ADMIN-------------------------*/
+
+.menuAdmin{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botonAdmin{
+    width: 90%;
+    background: #00A600;
+    color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+	min-width:500px;
+}
+
+.botonAdmin:hover{
+    background-color: #007d00;
+    transition: all ease 0.1s;
+}
+
+.botonAdmin:active{
+    background-color: #00c600;
+}
+
+/*-------------------AÑADIR RESTAURANTE-------------------------*/
+
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li>label{
+    font-weight: bold;
+}
+
+.inputs{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 10px 0px 20px 0px;
+    display: inline-block;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#formRest, #formRestEd{
+    width:50%;
+    padding:3% 2% 2% 2%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #d5ffd5;
+	min-width:500px;
+}
+
+#formRest label, #formRestEd label{
+    color: #007d00;
+}
+
+#form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto auto 2% auto;
+}
+
+.button{
+    font-size: 17px;
+    height: 40px;
+    width: 150px;
+    margin: 15px auto;
+    background-color: #00a600;
+    color: #ffffff;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #007d00;
+    transition: all ease 0.1s;
+}
+
+.button:active{
+    background-color: #00c600;
+}
+
+/*-------------------------NAV ADMIN--------------------------*/
+
+#navAdmin{
+	width:80%;
+    margin: -20px auto 30px auto;
+    z-index: 0;
+}
+
+#navAdmin img{
+	height: 20px;
+}
+
+.navegadorAdmin{
+	list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 0;
+}
+
+.navegadorAdmin li{
+	padding: 10px;
+	width: 20%;
+    background: #00A600;
+    color: #ffffff;
+    z-index: 0;
+}
+
+.navegadorAdmin a{
+	width: 100%;
+	height: 70px;
+    cursor:pointer;
+}
+
+.firstNavAdmin{
+	border-radius: 0 0 0 20px;
+}
+
+.lastNavAdmin{
+	border-radius: 0 0 20px 0;
+	border-left: 1px solid #ffffff;
+}
+
+.linkMarcado{
+	background-color: #00c600;
+}
+
+.navegadorAdmin li:hover{
+	background-color: #007d00;
+    transition: all ease 0.1s;
+}
+
+.navegadorAdmin li:active{
+    background-color: #00c600;
+}
+
+.navegadorAdmin label{
+    color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 5px;
+    cursor:pointer;
+}
+
+/*----------------------------LISTA RESTAURANTES----------------------------*/
+
+.containerData{
+	width: 50%;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.containerData>h2{
+	color: #006700;
+}
+
+.containerData>h3{
+	color: #00A600;
+}
+
+.containerData>img{
+	width: 100px;
+}
+
+.etiqueta{
+	position: relative;
+	width: 100%;
+	color: #ffffff;
+    background-color: #00a600;
+    padding: 20px 55px 20px 55px;
+    margin-top: -10px;
+    z-index: 20;
+    box-shadow: 2px 3px 12px -2px rgba(0,0,0,0.51);
+}
+
+.restaurantePack{
+	height: 150px;
+	width: 100%;
+	min-width:500px;
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #E2F0E1;
+    box-shadow: 2px 3px 12px -2px rgba(0,0,0,0.51);
+}
+
+.usuariosPack{
+	height: 80px;
+	width: 80%;
+	min-width:500px;
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #E2F0E1;
+    box-shadow: 2px 3px 12px -2px rgba(0,0,0,0.51);
+}
+
+.imgRest{
+	height: 100%;
+	padding:15px;
+    background-color: #007d00;
+}
+
+.imgRest>img{
+	height: 100%;
+	padding:5px;
+}
+
+.botonesLista{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	
+}
+
+.menuAdmin{
+    width: 40%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.datosRest{
+	width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.nomRest{
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.nomUser{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.datosUser{
+	width: 80%;
+    justify-content: space-around;
+}
+
+.datosUserIn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.datosUser img{
+    height: 50px;
+    margin: 0 20px 0 20px;
+}
+
+.catRest{
+	font-style: italic;
+	font-size: 15px;
+	color: #007d00;
+}
+
+.dirRest{
+	font-style: italic;
+	font-size: 15px;
+	color: #6c6c6c;
+}
+
+.telRest{
+	font-weight: bold;
+	font-size: 20px;
+	color: #007d00;
+}
+
+.marginTop{
+	margin-top: 10px;
+}
+
+.botonAdminList{
+    width: 90%;
+    background: #00A600;
+    color: #ffffff;
+    padding: 15px;
+    margin: 5px 20px 5px 5px;
+    cursor: pointer;
+}
+
+.botonAdminList label{
+	cursor: pointer;
+}
+
+.botonAdminList:hover{
+    background-color: #007d00;
+    transition: all ease 0.1s;
+}
+
+.botonAdminList:active{
+    background-color: #00c600;
+}
+
+.botonAdminList>img{
+	height: 25px;
+	display: none;
+}
+
+/*--------------------FOOTER----------------------*/
+
+footer{
+    clear: both;
+    background-color: #00A600;
+    width: 100%;
+}
+
+.footerbot{
+    clear: both;
+    background-color: #00A600;
+    width: 100%;
+    overflow: hidden;
+}
+
+.redes{
+    float: right;
+    height: 20px;
+    margin: 10px 20px 10px 0px;
+    cursor: pointer;
+}
+
+.redes:hover{
+    filter: opacity(70%);
+}
+
+.footerbot p{
+    float:right;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 13px;
+    font-style: italic;
+    margin-right: 25px;
+    margin-bottom: 7px;
+}
+
+.imagfoot{
+	margin-left: 10px;
+}
+
+.logofoot{
+    float: left;
+    height: 40px;
+    margin: 0px 0px 0px 0px;
+}
+
+.fotosFood{
+	margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    background-image: url("../img/food1.jpg");
+    background-position: center;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.gradient{
+	position: relative;
+	bottom: 0px;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(220,239,247,0) 46%, rgba(179,220,237,0) 100%);
+}
